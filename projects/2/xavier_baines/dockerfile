@@ -1,0 +1,30 @@
+# Use OCaml OPAM image
+FROM ocaml/opam:latest
+
+# Set working directory
+WORKDIR /app
+
+# Install OCaml, Dune, and necessary tools
+RUN opam update && opam install ocaml ocaml-base-compiler dune -y
+
+# Create project structure
+RUN mkdir -p hello_project/src
+
+# Set the working directory to the project folder
+WORKDIR /app/hello_project
+
+# Create dune-project file
+RUN echo "(lang dune 2.9)" > dune-project
+
+# Create dune file inside src
+RUN echo "(executable (name hello))" > src/dune
+
+# Copy OCaml source code
+COPY hello.ml src/hello.ml
+
+# Build the project (this ensures the executable is created)
+RUN eval $(opam env) && dune build
+
+# Set CMD to execute the hello program interactively
+CMD ["sh", "-c", "eval $(opam env) && dune exec ./src/hello.exe"]
+

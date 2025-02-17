@@ -3,6 +3,11 @@ This course explores the concepts of programming languages including the followi
 
 # Refined Schedule for Programming Course
 
+# Jon White Contact - LinkedIn: https://www.linkedin.com/in/jon-white-bb0b174a/
+- compsage@gmail.com
+- jon.white@red-alpha.com
+- Put 'COSC352' in the subject line if you reach out and send to both emails addresses
+
 ## Course Overview
 - **Structure**: 5 Projects, 4 Tests (Certification-Style In-Person), Midterm Orals, and Final Exams.
 - **Philosophy**: Emphasis on polyglot programming, understanding multiple languages, and their relevance in a modern LLM/GenAI context.
